@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeaderTask Main Menu - Premium</title>
+    <link rel="stylesheet" href="styles4.css">
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.css' rel='stylesheet' />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" id="home-link">LeaderTask</a>
+            </div>
+            <nav>
+                <ul class="main-menu">
+                    <li><a href="index.html" id="home-menu-link">Главная</a></li>
+                    <li><a href="3index.html">О нас</a></li>
+                    <li><a href="#" id="services-link">Услуги <span id="current-date"></span></a></li>
+                    <li><a href="#" id="notes-link">Ваши заметки</a></li>
+                    <li><a href="premium.html" id="premium-link">Премиум режим</a></li>
+                    <li><a href="4index.html" id="new-themes-link">Новые темы</a></li>
+                    <li><a href="#" id="logout-btn">Выйти</a></li>
+                </ul>
+            </nav>
+            <div class="profile-menu">
+                <img id="profile-avatar" src="default-avatar.png" alt="Avatar">
+                <div id="profile-dropdown" class="dropdown hidden">
+                    <label for="avatar-upload">Change Avatar:</label>
+                    <input type="file" id="avatar-upload" accept="image/*">
+                </div>
+            </div>
+        </div>
+    </header>
+    <main id="content">
+        <div id="home-container" class="hidden">
+            <div class="sidebar">
+                <h2>My Projects</h2>
+                <ul id="project-list">
+                    <li><a href="#" data-folder="LeaderTask">LeaderTask</a></li>
+                    <li><a href="#" data-folder="Health">Health</a></li>
+                    <li><a href="#" data-folder="Business">Business</a></li>
+                    <li><a href="#" data-folder="Family">Family</a></li>
+                    <li><a href="#" data-folder="Travel">Travel</a></li>
+                    <li><a href="#" data-folder="Hobby">Hobby</a></li>
+                </ul>
+                <button id="add-project-btn">Add Project</button>
+            </div>
+            <div class="tasks">
+                <h2>Add task...</h2>
+                <ul id="task-list">
+                    <!-- Dynamic task items will be appended here -->
+                </ul>
+                <button id="add-note-btn-main">Добавить заметку</button>
+            </div>
+        </div>
+        <div id="calendar-container" class="hidden">
+            <div id="calendar"></div>
+        </div>
+        <div id="notes-menu" class="hidden">
+            <div class="notes-container">
+                <h2>Ваши заметки</h2>
+                <div class="folders">
+                    <button class="folder-btn" data-folder="Family">Семья</button>
+                    <button class="folder-btn" data-folder="Health">Здоровье</button>
+                    <button class="folder-btn" data-folder="Hobby">Хобби</button>
+                    <button class="folder-btn" data-folder="Travel">Путешествие</button>
+                    <button class="folder-btn" data-folder="Business">Бизнес</button>
+                </div>
+                <div class="notes">
+                    <h3 id="folder-title">Выберите папку</h3>
+                    <div id="notes-list"></div>
+                    <div id="note-editor" class="hidden">
+                        <input type="date" id="note-date" />
+                        <textarea id="note-content" placeholder="Введите текст заметки..."></textarea>
+                        <button id="save-note-btn">Сохранить заметку</button>
+                    </div>
+                    <button id="add-note-btn">Добавить заметку</button>
+                </div>
+            </div>
+        </div>
+        <div id="themes-menu" class="hidden">
+            <div class="themes-container">
+                <h2>Управление Темами</h2>
+                <div class="theme-creator">
+                    <input type="text" id="theme-name" placeholder="Название темы">
+                    <button id="create-theme-btn">Создать тему</button>
+                </div>
+                <div id="themes-list"></div>
+            </div>
+        </div>
+    </main>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js'></script>
+    <script src="script4.js"></script>
+</body>
+</html>

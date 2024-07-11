@@ -1,0 +1,295 @@
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Стили для заголовка и меню */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav {
+    margin-left: auto;
+}
+
+.main-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.main-menu li {
+    margin: 0 15px;
+}
+
+.main-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.profile-menu {
+    position: relative;
+}
+
+#profile-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: absolute;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    padding: 10px;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+.dropdown.hidden {
+    display: none;
+}
+
+/* Стили для основного контента */
+.sidebar {
+    float: left;
+    width: 25%;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 10px 0;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #333;
+}
+
+.tasks h2 {
+    margin-top: 0;
+}
+
+.tasks ul {
+    list-style: none;
+    padding: 0;
+}
+
+.tasks li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Стили для заметок */
+.notes-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.notes-container h2 {
+    margin-top: 0;
+}
+
+.folders {
+    margin-bottom: 20px;
+}
+
+.folder-btn {
+    margin-right: 10px;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#notes-list .note {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+#note-editor {
+    margin-top: 20px;
+}
+
+#note-date,
+#note-content {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+#save-note-btn,
+#add-note-btn {
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* Стили для календаря */
+#calendar-container {
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tooltip {
+    position: absolute;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+/* Стили для премиум-страницы */
+.premium-options {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.premium-options h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.plan {
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.plan h2 {
+    margin-top: 0;
+}
+
+.buy-btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* Стили для страницы оплаты */
+.payment-form {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.payment-form h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.payment-form input {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+.payment-form button {
+    display: inline-block;
+    width: 48%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.payment-form button#cancel-btn {
+    background-color: #aaa;
+}
+
+/* Стили для раздела "История компании" */
+.company-features {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.company-features h2 {
+    margin-top: 0;
+}
+
+.company-features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.company-features li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.social-media {
+    text-align: center;
+}

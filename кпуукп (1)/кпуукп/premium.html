@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Премиум-подписка</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" id="home-link">LeaderTask</a>
+            </div>
+            <nav>
+                <ul class="main-menu">
+                    <li><a href="index.html" id="home-menu-link">Главная</a></li>
+                    <li><a href="3index.html">О нас</a></li>
+                    <li><a href="#" id="services-link">Услуги <span id="current-date"></span></a></li>
+                    <li><a href="#" id="notes-link">Ваши заметки</a></li>
+                    <li><a href="premium.html" id="premium-link">Премиум режим</a></li>
+                    <li><a href="#" id="logout-btn">Выйти</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="premium-options">
+            <h1>Премиум-подписка</h1>
+            <div class="plan">
+                <h2>1 месяц</h2>
+                <p>Доступ ко всем премиум функциям на 1 месяц.</p>
+                <button class="buy-btn" data-plan="monthly">Купить за 500 тенге</button>
+            </div>
+            <div class="plan">
+                <h2>1 год</h2>
+                <p>Доступ ко всем премиум функциям на 1 год.</p>
+                <button class="buy-btn" data-plan="yearly">Купить за 5000 тенге, 10% скидка</button>
+            </div>
+        </div>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.buy-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const plan = this.getAttribute('data-plan');
+                    window.location.href = `payment.html?plan=${plan}`;
+                });
+            });
+        });
+    </script>
+</body>
+</html>
